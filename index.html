@@ -1,54 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nicholas Restaurant</title>
-<link rel="stylesheet" href="styles.css">
-<script defer src="script.js"></script>
-</head>
-<body>
-<nav class="nav">
-<div class="brand">
-<div class="logo">Nicholas</div>
-<div class="tag">Lebanese & Mediterranean Cuisine</div>
-</div>
-<button id="menuBtn">☰</button>
-<ul id="menu">
-<li><a href="#about">About</a></li>
-<li><a href="#menu-section">Menu</a></li>
-<li><a href="#hours">Hours</a></li>
-<li><a href="#visit">Visit</a></li>
-</ul>
-</nav>
+<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Nicholas Restaurant | Luxury Edition</title>
+<link rel='stylesheet' href='styles.css'><script defer src='script.js'></script></head><body>
+<nav><div class='logo'>Nicholas<span>Lebanese & Mediterranean Cuisine</span></div><button id='m'>☰</button>
+<ul id='n'><li><a href='#story'>Story</a></li><li><a href='#menu'>Menu</a></li><li><a href='#gallery'>Gallery</a></li><li><a href='#visit'>Visit</a></li></ul></nav>
 
-<header class="hero">
-<h1>Nicholas Restaurant</h1>
-<p>Fresh pita, generous portions, made with love since day one.</p>
-<a class="cta" href="tel:5036663333">Call (503) 666-3333</a>
-</header>
+<header class='hero'><div class='shade'><h1>Nicholas Restaurant</h1><p>Authentic Lebanese flavors, warm hospitality, and legendary fresh pita.</p>
+<a class='gold' href='tel:5036663333'>Call Now</a></div></header>
 
-<section id="about">
-<h2>About</h2>
-<p>Authentic Lebanese & Mediterranean dining in Gresham, Oregon.</p>
-</section>
+<section id='story' class='split'><div><h2>A Gresham Tradition</h2><p>Serving Mediterranean favorites with generous portions and welcoming hospitality. Inspired by family recipes and fresh ingredients.</p></div><img src='interior_bar.jpg'></section>
 
-<section id="menu-section">
-<h2>Menu</h2>
-<div class="grid">
-<div class="card"><h3>Starters</h3><p>Hummus $8<br>Tabouli $9<br>Lentil Soup $7</p></div>
-<div class="card"><h3>Grill</h3><p>Lamb Kabobs $22<br>Chicken Kabobs $19<br>Wrap $16</p></div>
-</div>
-</section>
+<section class='parallax'><div><h2>The Pita Tradition</h2><p>Fresh-baked, warm, and served to every table.</p></div></section>
 
-<section id="hours">
-<h2>Hours</h2>
-<p>Mon-Thu 11am-8pm<br>Fri-Sat 11am-9pm<br>Sun 11am-8pm</p>
-</section>
+<section id='menu'><h2>Featured Menu</h2>
+<div class='cards'>
+<div><h3>Mezze</h3><p>Hummus $8<br>Baba Ghanoush $9<br>Falafel $10<br>Tabouli $9</p></div>
+<div><h3>Grill</h3><p>Lamb Kabobs $22<br>Chicken Kabobs $19<br>Wrap $16</p></div>
+<div><h3>Favorites</h3><p>Lentil Soup $7<br>Greek Salad $10<br>Rice Platter $18</p></div>
+</div></section>
 
-<section id="visit">
-<h2>Find Us</h2>
-<iframe src="https://maps.google.com/maps?q=323%20N%20Main%20Ave%20Gresham%20OR&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
-</section>
-</body>
-</html>
+<section id='gallery'><h2>Restaurant Gallery</h2>
+<div class='gallery'>
+<img src='exterior.jpg'><img src='dining_room.jpg'><img src='interior_bar.jpg'>
+<img src='kabobs.jpg'><img src='mezze.jpg'><img src='platter.jpg'>
+</div></section>
+
+<section class='reviews'><h2>Guest Reviews</h2>
+<div class='cards'>
+<div>★★★★★<p>Outstanding food and fresh pita.</p></div>
+<div>★★★★★<p>Great portions and excellent service.</p></div>
+<div>★★★★★<p>A local favorite for years.</p></div>
+</div></section>
+
+<section id='visit'><h2>Visit Us</h2><p>323 N Main Ave, Gresham, OR 97030</p>
+<iframe src='https://maps.google.com/maps?q=323%20N%20Main%20Ave%20Gresham%20OR&t=&z=15&ie=UTF8&iwloc=&output=embed'></iframe></section>
+
+<footer><h3>Nicholas Restaurant</h3><a class='gold' href='tel:5036663333'>Reserve by Phone</a></footer>
+</body></html>

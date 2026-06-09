@@ -1,1 +1,1 @@
-document.getElementById('menuBtn').onclick=()=>document.getElementById('menu').classList.toggle('show');
+document.getElementById('m').onclick=()=>document.getElementById('n').classList.toggle('show')
