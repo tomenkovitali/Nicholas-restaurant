@@ -1,2 +1,292 @@
+/* =====================================
+   NICHOLAS RESTAURANT - LUXURY EDITION
+   ===================================== */
 
-/* ========================== PREMIUM NICHOLAS GALLERY ========================== */ .gallery{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; margin-top:50px; } .gallery img{ width:100%; /* Smaller display size = sharper photos */ height:240px; object-fit:cover; border-radius:20px; /* Makes customer photos look more professional */ filter: contrast(1.08) saturate(1.15) brightness(1.03); box-shadow: 0 12px 30px rgba(0,0,0,.12); transition: transform .4s ease, filter .4s ease, box-shadow .4s ease; display:block; } .gallery img:hover{ transform:translateY(-6px) scale(1.02); filter: contrast(1.12) saturate(1.25) brightness(1.05); box-shadow: 0 20px 50px rgba(0,0,0,.18); } /* ========================== FEATURED IMAGE SECTION ========================== */ .hero{ position:relative; background: linear-gradient( rgba(0,0,0,.50), rgba(0,0,0,.50) ), url('dining_room.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat; min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; } .hero h1{ font-size:5.5rem; color:white; margin-bottom:20px; } .hero p{ color:white; font-size:1.2rem; max-width:700px; margin:auto; } /* ========================== CARD STYLING ========================== */ .cards div{ background:white; border-radius:20px; padding:30px; box-shadow: 0 10px 25px rgba(0,0,0,.08); transition:.3s; } .cards div:hover{ transform:translateY(-4px); } /* ========================== INTERIOR PHOTOS ========================== */ .split img{ width:100%; height:450px; object-fit:cover; border-radius:20px; filter: contrast(1.05) saturate(1.1); box-shadow: 0 15px 40px rgba(0,0,0,.15); } /* ========================== PARALLAX SECTION ========================== */ .parallax{ background: linear-gradient( rgba(0,0,0,.35), rgba(0,0,0,.35) ), url('mezze.jpg'); background-size:cover; background-position:center; background-attachment:fixed; min-height:60vh; display:flex; align-items:center; justify-content:center; color:white; } /* ========================== MOBILE ========================== */ @media(max-width:900px){ .gallery{ grid-template-columns:1fr; } .gallery img{ height:220px; } .hero h1{ font-size:3rem; } .split img{ height:300px; } }
+   *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f7f2ea;
+    color:#222;
+    line-height:1.6;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    font-size:2rem;
+    font-weight:bold;
+}
+
+.logo span{
+    display:block;
+    font-size:.75rem;
+    font-weight:normal;
+}
+
+#n{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+#n a{
+    color:white;
+    text-decoration:none;
+}
+
+#m{
+    display:none;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.55)
+        ),
+        url("dining_room.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.shade{
+    color:white;
+    padding:40px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.gold{
+    display:inline-block;
+    background:#c9a66b;
+    color:#111;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* SECTIONS */
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:90px 20px;
+}
+
+h2{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+/* STORY */
+
+.split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.split img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+/* PARALLAX */
+
+.parallax{
+    max-width:none;
+    min-height:60vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.45)
+        ),
+        url("mezze.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+}
+
+.parallax div{
+    padding:40px;
+}
+
+/* MENU */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.cards div{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.cards h3{
+    margin-bottom:15px;
+}
+
+/* GALLERY */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:24px;
+    margin-top:40px;
+}
+
+.gallery img{
+    width:100%;
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.12);
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.18);
+}
+
+/* REVIEWS */
+
+.reviews{
+    text-align:center;
+}
+
+/* MAP */
+
+iframe{
+    width:100%;
+    height:450px;
+    border:none;
+    border-radius:20px;
+    margin-top:20px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+footer h3{
+    margin-bottom:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    #m{
+        display:block;
+        background:none;
+        border:none;
+        color:white;
+        font-size:1.8rem;
+        cursor:pointer;
+    }
+
+    #n{
+        display:none;
+        position:absolute;
+        top:70px;
+        right:20px;
+        background:#111;
+        padding:20px;
+        flex-direction:column;
+        border-radius:12px;
+    }
+
+    #n.show{
+        display:flex;
+    }
+
+    .split{
+        grid-template-columns:1fr;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .gallery img{
+        height:220px;
+    }
+}
